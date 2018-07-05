@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "RalewayBold"; src: url("./fuentes/Raleway-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RalewayMedium"; src: url("./fuentes/Raleway-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RalewayRegular"; src: url("./fuentes/Raleway-Regular.ttf") format("truetype");
+}
+$fontBold: "RalewayBold"; 
+$fontMedium: "RalewayMedium";
+$fontRegular: "RalewayRegular";

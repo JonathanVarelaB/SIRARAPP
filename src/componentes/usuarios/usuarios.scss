@@ -1,0 +1,237 @@
+#contenedorUsuarios{
+    background-color: white;
+    width: 100%;
+    #encabezadoUsuarios{
+        border-bottom: 2px solid $rojoPrincipal; 
+        p{
+            width: 55%;
+            float: right;
+            text-align: left;
+        }
+        & > div{
+            box-shadow: none !important;
+            width: 30%;
+            float: left;
+            margin: 0px auto 0 15px;
+            button{
+                height: 20px !important;
+                margin-top: 13px !important;
+                padding: 0 !important;
+                transform: scale(0.8,0.8) !important;
+            }
+        }
+        .barraBusquedaUsuarios{
+            margin-left: 3vw !important;
+            div{
+                line-height: 20px !important;
+                font-family: $fontRegular !important;
+                font-size: 0.8rem !important;
+                letter-spacing: 1px !important;
+                text-transform: capitalize;
+            }
+            input{
+                margin-top: 6px !important;
+                height: 80% !important;
+                font-family: $fontRegular !important;
+                font-size: 0.8rem !important;
+                letter-spacing: 1px !important;
+            }
+        }
+    }
+    #cuerpoUsuarios{
+        width: 100vw;
+        padding-top: 53px;
+        #formularioUsuarios{
+            float: right;
+            width: 67%;
+            #contenedorFormUsuario{
+                width: 100%;
+                margin: 0 auto;
+                #formPerfil{
+                    width: 30%;
+                    position: fixed !important;
+                    top: calc(153px + 5vh);
+                    right: 20%;
+                }
+            }
+        }
+        #listadoUsuarios{
+            height: fit-content;
+            min-height: calc(100vh - 188px);
+            width: 30%;
+            margin: 0 0 0 3%;
+            border-right: 1px solid lightgrey; 
+            .itemUsuario{
+                div{
+                    div{
+                        div{
+                            color: $azulPrincipal !important;
+                            @extend .textoRegular;
+                            font-size: 1rem !important;
+                        }
+                        p{
+                            display: block !important;
+                            @extend .textoMediano;
+                        }
+                    }
+                }
+                #fotoSkeleton{
+                    width: 40px !important;
+                    top: 0 !important;
+                    span{
+                        span{
+                            height: 40px !important;
+                            border-radius: 50% !important;
+                        }
+                    }
+                }
+                #labelRolUsuario{
+                    float: right;
+                    margin-top: -38px;
+                }
+            }
+        }
+    }
+    .botonAgregarUsuario{
+        display: none !important;
+        button{
+            background-color: $azulRegular !important;
+            opacity: 1;
+            position: fixed !important;
+            bottom: 30px;
+            right: 50px !important;
+            @extend .animacionScrollHeader;
+        }
+    }
+}
+#modalFormUsuario{
+    display: none;
+    position: absolute;
+    top: 0px;
+    z-index: 3000;
+    width: 100%;
+    background-color: white;
+    .botonCerrarForm{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        box-shadow: none !important;
+        button{
+            border-radius: 0 !important;
+            background-color: white !important;
+            div div svg{ 
+                height: 30px !important;
+                path{
+                    fill: $rojoPrincipal !important;
+                }
+            }
+        }
+    }
+}
+
+.subirBoton{
+    button{
+        bottom: 80px !important;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    #cuerpoUsuarios{
+        #formularioUsuarios{
+            width: 42% !important;
+            #contenedorFormUsuario{
+                #formPerfil{
+                    width: 40% !important;
+                    right: 10% !important;
+                }
+            }
+        }
+        #listadoUsuarios{
+            width: 35% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    #cuerpoUsuarios{
+        #formularioUsuarios{
+            width: 37% !important;
+        }
+        #listadoUsuarios{
+            width: 40% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #cuerpoUsuarios{
+        #formularioUsuarios{
+            width: 32% !important;
+            #contenedorFormUsuario{
+                #formPerfil{
+                    width: 40% !important;
+                    right: 5% !important;
+                }
+            }
+        }
+        #listadoUsuarios{
+            width: 45% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    #cuerpoUsuarios{
+        #formularioUsuarios{
+            display: none;
+        }
+        #listadoUsuarios{
+            width: 100% !important;
+            float: none !important;
+            margin-left: 0 !important;
+            border-right: 0 !important;
+            .itemUsuario{
+                div{
+                    div{
+                        p{
+                            height: 50px !important;
+                        }
+                    }
+                }
+                #labelRolUsuario{
+                    float: left !important;
+                    margin-top: 0 !important;
+                }
+            }
+        }
+        .botonAgregarUsuario{
+            display:  block !important;
+            button{
+                bottom: 20px;
+                right: 20px !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #contenedorUsuarios{
+        #encabezadoUsuarios{
+            p{
+                width: 40% !important;
+                min-width: 120px;
+                text-align: center !important;
+                margin-left: 15px;
+            }
+            & > div{
+                width: 50% !important;
+                margin-left: 0px !important;
+            }
+        }
+    }
+}
+
+@media only screen 
+  and (max-device-width: 830px) 
+  and (orientation: landscape) { 
+}

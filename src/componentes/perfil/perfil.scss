@@ -1,0 +1,110 @@
+#contenedorPerfil{
+    background-color: white;
+    width: 100%;
+    #formPerfil{
+        padding-top: calc( 5% + 48px );
+        margin-bottom: 20px; 
+        max-width: 400px; 
+        #inputs{
+            margin-bottom: 30px;
+            #fotoPerfil{
+                margin: 0 auto 15px auto;
+                width: fit-content;
+                img{
+                    border-radius: 50%; 
+                    height: 130px;
+                    width: 130px;
+                }
+                i{
+                    color: $azulFuerte;
+                }
+                #inputFoto{
+                    display: none;
+                }
+            }
+        }
+        #inputsSkeleton{
+            margin-bottom: 30px;
+            #fotoSkeleton{
+                width: 120px;
+                height: 120px;
+                margin: 0 auto;
+                span{
+                    span{
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
+                    }
+                } 
+            }
+            #cuerpoSkeleton{
+                margin-top: 17px;
+                span{
+                    margin-top: 40px;
+                    height: 30px;
+                }
+            }
+        }
+        input, label{
+            font-family: $fontMedium !important;
+            letter-spacing: 1.5px;
+        }
+        button{
+            @extend .botonAceptar;
+            span{
+                letter-spacing: 2px !important;
+            }
+        }
+    }
+}
+.overlayVisualizador{
+    background-color: rgba($color: black, $alpha: 0.9) !important;
+}
+.visualizadorModal{
+    text-align: center !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    & > div{
+        background-color: black !important;
+    }
+    img{
+        border: 1px solid white !important;
+        max-width: 100% !important;
+        max-height: 60vh !important;
+    }
+}
+.opcionesPopover{
+    padding: 0 !important;
+    div{
+        span{
+            color: $azulFuerte !important;
+            font-family: $fontRegular !important;
+            font-size: 14px !important;
+        }
+    }
+}
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 830px){
+    #contenedorPerfil{
+        #formPerfil{
+            #inputs{
+                #fotoPerfil{
+                    margin-bottom: 0 !important;
+                    img{
+                        height: 100px !important;
+                        width: 100px !important;
+                    }
+                }
+            }
+            #inputsSkeleton{
+                #fotoSkeleton{
+                    width: 100px !important;
+                    height: 100px !important;
+                }
+                #cuerpoSkeleton{
+                    margin-top: 0px !important;
+                }
+            }
+        }
+    }
+}

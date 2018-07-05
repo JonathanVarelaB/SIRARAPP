@@ -1,0 +1,123 @@
+#contenedorFormUsuario{
+    background-color: white;
+    #formPerfil{
+        #inputs{
+            #fotoPerfil{
+                margin: 0 auto 15px auto;
+                width: fit-content;
+                img{
+                    border-radius: 50%; 
+                    height: 120px;
+                    width: 120px;
+                }
+                i{
+                    color: $azulFuerte;
+                }
+                #inputFoto{
+                    display: none;
+                }
+            }
+            #grupoInputs{
+                & > div{
+                    height: 55px !important;
+                    label{
+                        top: 21px !important;
+                    }
+                    input{
+                        margin-top: 3px !important;
+                    }
+                }
+            }
+        }
+        input, label{
+            font-family: $fontRegular !important;
+            letter-spacing: 1.5px;
+        }
+        .botonAgregarU{
+            margin-top: 30px !important;
+            box-shadow: none !important;
+            button{
+                @extend .botonAceptar;
+            }
+        }
+        .botonEliminarU{
+            margin-top: 20px !important;
+            box-shadow: none !important;
+            button{
+                @extend .botonCancelar;
+            }
+        }
+    }
+}
+.overlayVisualizador{
+    background-color: rgba($color: black, $alpha: 0.9) !important;
+}
+.visualizadorModal{
+    text-align: center !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    & > div{
+        background-color: black !important;
+    }
+    img{
+        border: 1px solid white !important;
+        max-width: 100% !important;
+        max-height: 60vh !important;
+    }
+}
+.opcionesPopover{
+    padding: 0 !important;
+    div{
+        span{
+            color: $azulFuerte !important;
+            font-family: $fontRegular !important;
+            font-size: 14px !important;
+        }
+    }
+}
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 830px){
+    #contenedorFormUsuario{
+        width: 80%;
+        margin: 5% auto 0 auto !important;
+        #formPerfil{
+            #inputs{
+                #fotoPerfil{
+                    width: fit-content;
+                    margin-bottom: 20px !important;
+                    img{
+                        height: 100px !important;
+                        width: 100px !important;
+                    }
+                }
+            }
+            #grupoBotones{
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media only screen  and (max-device-width: 830px) and (orientation: landscape) { 
+    /*#contenedorFormUsuario{
+        width: 90% !important;
+        #formPerfil{
+            #inputs{
+                #fotoPerfil{
+                    float: left !important;
+                    width: 30% !important;
+                }
+                #grupoInputs{
+                    float: right !important;
+                    width: 55% !important;
+                    margin: 0 5% 0 10% !important;
+                }
+            }
+            #grupoBotones{
+                position: fixed;
+                width: 15% !important;
+                bottom: 10%;
+            }
+        }
+    }*/
+}

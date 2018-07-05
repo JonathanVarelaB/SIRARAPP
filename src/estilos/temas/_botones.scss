@@ -1,0 +1,37 @@
+form{
+    & > div:last-child{
+        box-shadow: none !important;
+    }
+}
+.botonFormulario{
+    font-size: 16px !important;
+    font-family: $fontMedium !important;
+    span{
+        letter-spacing: 2px !important;
+    }
+    &:hover, &:active{
+        span{
+            color: white !important;
+        }
+    }
+}
+.botonAceptar{
+    @extend .botonFormulario;
+    border: 1px solid $azulRegular !important;
+    span{
+        color: $azulRegular !important;
+    }
+    &:hover, &:active{
+        background-color: $azulFuerte !important;
+    }
+}
+.botonCancelar{
+    @extend .botonFormulario;
+    border: 1px solid $rojoPrincipal !important;
+    span{
+        color: $rojoPrincipal !important;
+    }
+    &:hover, &:active{
+        background-color: $rojoPrincipal !important;
+    }
+}

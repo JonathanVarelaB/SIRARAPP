@@ -1,0 +1,115 @@
+#fondo{
+    height: calc( 100vh - 135px);
+    min-height: 300px;
+    width: auto;
+    //background-image: url("../assets/instalaciones.jpg");
+    background-image: url("../assets/instalaciones2.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    #carouselInformativo{
+        #swipeContenido{
+            background-color: rgba($color: $azulFuerte, $alpha: 0.6);
+            height: 100%;
+            #mision, #vision{
+                margin: 0 3%;
+                & > p:first-child{
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+                & > p:last-child{
+                    letter-spacing: 2px !important;
+                }
+            }
+            #eventos{
+                padding: 0 3%;
+                background-color: rgba($color: white, $alpha: 1);
+                height: 130px;
+                & > p:first-child{
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+                #eventosPortada{
+                    margin: 0 auto !important;
+                    text-align: center;
+                    & > div{
+                        padding-top: 20px !important;
+                    }
+                    div{
+                        img{
+                            height: 60px;
+                            width: auto;
+                            max-width: 140px;
+                        }
+                        p{
+                            margin: 0;
+                            color: $azulFuerte;
+                            @extend .textoPequenno;
+                        }
+                    }   
+                }
+                #fotoSkeleton{
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 auto;
+                    span{
+                        span{
+                            border-radius: 50%;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    } 
+                }
+                #tituloSkeleton{
+                    padding: 0 !important;
+                    margin: 10px auto;
+                    width: 110px;
+                }
+            }
+        }
+        width: 60%;
+        height: 130px;
+        position: absolute;
+        right: 0;
+        bottom: 90px;
+        color: white;
+    }
+}
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 1030px){
+    #carouselInformativo{
+        width: 70% !important;
+        #eventosPortada{
+            & > div{
+                padding: 5px 5px 0 5px !important;
+            }
+        }
+    }
+}
+// tablet y teléfono (landscape y portrait)
+@media only screen and (max-width: 830px){
+    #fondo{
+        height: calc( 100vh - 140px);
+        #carouselInformativo{
+            width: 100% !important;
+            bottom: 70px;
+            #swipeContenido{
+                #mision, #vision{
+                    & > p:last-child{
+                        letter-spacing: 1.5px !important;
+                        font-size: 0.6rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px){
+    #eventosPortada{
+        div{
+            img{
+                max-width: 120px !important;
+            }
+        }
+    }
+}
